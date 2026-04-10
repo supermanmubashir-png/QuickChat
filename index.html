@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>QuickChat</title>
+
+<link rel="icon" href="/static/icon.png">
+
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div id="topbar">
+    <img src="/static/icon.png" class="logo">
+    <h2>QuickChat</h2>
+</div>
+
+<div id="login">
+    <input id="username" placeholder="Enter name">
+    <button onclick="enter()">Enter</button>
+</div>
+
+<div id="chat" style="display:none;">
+    <div id="messages"></div>
+    <div id="typing"></div>
+
+    <div class="input">
+        <input id="msg" placeholder="Message" oninput="typing()">
+        <button onclick="sendMsg()">Send</button>
+    </div>
+</div>
+
+<script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+<script src="/static/script.js"></script>
+
+</body>
+</html>
