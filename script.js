@@ -1,13 +1,19 @@
 let socket = io();
 let username = "";
 let device = navigator.userAgent;
-
 function enter(){
-    username = document.getElementById("username").value;
-    localStorage.setItem("user", username);
+    let input = document.getElementById("username");
+    let name = input.value.trim();
 
-    document.getElementById("login").style.display="none";
-    document.getElementById("chat").style.display="block";
+    if(name === ""){
+        alert("Enter name first!");
+        return;
+    }
+
+    username = name;
+
+    document.getElementById("login").style.display = "none";
+    document.getElementById("chat").style.display = "block";
 }
 
 function sendMsg(){
